@@ -1,0 +1,30 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8081/eureka/
+#      defaultZone: http://localhost:8081/eureka/
+server:
+  port: 8082
+spring:
+  application:
+    name: pcloud-gateway
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        service-id: pcloud-config
+        enabled: true
+      label: ${spring.profiles.active}
+      profile: ${spring.profiles.active}
+      username: admin
+      password: admin
+
+
+#zuul:
+#  routes:
+#    api-user:
+#      path: /api-user/**
+#      serviceId: user-service
+#    api-pay:
+#      path: /api-pay/**
+#      serviceId: pay-service

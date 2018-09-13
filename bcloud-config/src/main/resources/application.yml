@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: @pom.artifactId@
+  rabbitmq:
+    host: mqserver
+    port: 5672
+    username: guest
+    password: guest

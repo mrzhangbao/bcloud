@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: user-service
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://localhost:8081/eureka/
+      defaultZone: http://eureka-server:8081/eureka/
+  instance:
+      instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+      #微服务显示IP
+      prefer-ip-address: true
+server:
+  port: 8086

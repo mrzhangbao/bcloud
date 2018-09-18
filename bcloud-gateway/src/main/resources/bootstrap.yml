@@ -3,16 +3,20 @@ eureka:
     serviceUrl:
       defaultZone: http://eureka-server:8081/eureka/
 #      defaultZone: http://localhost:8081/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+    #微服务显示IP
+    prefer-ip-address: true
 server:
   port: 8082
 spring:
   application:
-    name: pcloud-gateway
+    name: bcloud-gateway
   cloud:
     config:
       fail-fast: true
       discovery:
-        service-id: pcloud-config
+        service-id: bcloud-config
         enabled: true
       label: ${spring.profiles.active}
       profile: ${spring.profiles.active}

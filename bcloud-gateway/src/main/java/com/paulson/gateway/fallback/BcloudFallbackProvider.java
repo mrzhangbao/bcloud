@@ -18,10 +18,10 @@ import java.io.InputStream;
  * @desc  
  */  
 @Component
-public class PcloudFallbackProvider implements ZuulFallbackProvider {
+public class BcloudFallbackProvider implements ZuulFallbackProvider {
 
     /** logger */
-    private static final Logger log = LoggerFactory.getLogger(PcloudFallbackProvider.class);
+    private static final Logger log = LoggerFactory.getLogger(BcloudFallbackProvider.class);
 
     @Override
     public String getRoute() {
